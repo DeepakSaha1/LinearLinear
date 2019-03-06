@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="7dp">
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    app:cardCornerRadius="4dp"
+    tools:context=".RestaurantsMenu"
+    app:cardBackgroundColor="@color/color_white"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/food_icon_iv"
+            app:cardCornerRadius="20dp"
+            android:elevation="2dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/food_icon"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp"/>
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ice_cream_sundae"
+            android:layout_below="@id/food_icon_iv"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/food_name"
+            android:id="@+id/restaurant_name"
+            android:text="@string/restaurant_address"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            android:textColor="@color/color_grey"/>
+
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:numStars="5"
+            android:rating="3"
+            style="@style/customRatingBar"
+            android:theme="@style/customRatingBar"
+            android:layout_below="@id/restaurant_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_reviews_tv"
+            android:text="@string/reviews"
+            android:layout_toRightOf="@id/rating"
+            android:layout_below="@id/restaurant_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/color_grey"
+            android:layout_alignBaseline="@id/rating"
+            />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+</RelativeLayout>
